@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class GrossSalary {
+	public static void main(String[] args) {
+		int basic_salary;
+		float hra, da, ta, pf,gross_salary;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the basic salary (in INR)");
+		basic_salary=sc.nextInt();
+		System.out.println("Enter the house rent allowance (in Percentage)");
+		hra=sc.nextFloat();
+		System.out.println("Enter the dearness allowance (in Percentage)");
+		da=sc.nextFloat();
+		System.out.println("Enter the travelling allowance (in Percentage)");
+		ta=sc.nextFloat();
+		System.out.println("Enter the provident fund (in Percentage)");
+		pf=sc.nextFloat();
+		hra=(hra*basic_salary)/100;
+		da=(da*basic_salary)/100;
+		ta=(ta*basic_salary)/100;
+		pf=(pf*basic_salary)/100;
+		gross_salary=(basic_salary+hra+da+ta+pf);
+		System.out.println("The gross salary is:" +gross_salary);
+		sc.close();
+	}
+}
