@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Percentage {
+
+	public static void main(String[] args) {
+		float percentage;
+		int tam,eng,math,sci,social,total;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Tamil marks");
+		tam=sc.nextInt();
+		System.out.println("Enter English marks");
+		eng=sc.nextInt();
+		System.out.println("Enter Maths marks");
+		math=sc.nextInt();
+		System.out.println("Enter Science marks");
+		sci=sc.nextInt();
+		System.out.println("Enter Social Science marks");
+		social=sc.nextInt();
+		total=tam+eng+math+sci+social;
+		percentage=total/5;
+		System.out.println("Total:" +total);
+		System.out.println("Percentage:" +percentage);
+		if(percentage>=75.00)
+			System.out.println("Distinction");
+		else if(percentage>=60.00 && percentage<75.00)
+			System.out.println("First division");
+		else if(percentage>=50.00 && percentage<60.00)
+			System.out.println("Second division");
+		else if(percentage>=40.00 && percentage<50.00)
+			System.out.println("Third division");
+		else
+			System.out.println("Fail");
+		sc.close();	
+	}
+
+}
