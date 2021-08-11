@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Dimensions {
+
+	public static void main(String[] args) {
+		int feet1,feet2,result_feet;
+		float inch1,inch2,result_inches;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 1 st feet");
+		feet1=sc.nextInt();
+		System.out.println("Enter 2 nd feet");
+		feet2=sc.nextInt();
+		System.out.println("Enter 1 st inches");
+		inch1=sc.nextFloat();
+		System.out.println("Enter 2 nd inch");
+		inch2=sc.nextFloat();
+		result_feet=feet1+feet2;
+		result_inches=inch1+inch2;
+		if(result_inches>=12){
+			result_feet=result_feet+1;
+			result_inches=result_inches-12;
+		}
+		System.out.println("Total " +result_feet+ " and " +result_inches);
+		sc.close();
+	}
+
+}
